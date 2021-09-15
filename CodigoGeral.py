@@ -1,5 +1,5 @@
 #Codigo Geral: Qualquer palavra / Qualquer um dos 4 numeros: '01', '02', '03', '04'
-#Autor: Ramon Moratori & Tiago Pulinho
+#Autor: Ramon Moratori 
 
 #A imagem precisa ser em formato .jpg e de tamanho no maximo de 600x600
 import tensorflow as tf
@@ -17,6 +17,9 @@ import serial
 porta = "COM3" #DEFINA A PORTA USB CORRETA ONDE O ARDUINO ESTA LIGADO
 velocidade = 9600
 conexao = serial.Serial(porta, velocidade);
+conexao.write(b'5') # Inicia enviando 5
+valor_antigo = 5
+
 
 #__________________________________IDENTIFICA O NUMERO__________________________________________
 
@@ -111,11 +114,13 @@ while(1):
     
     #___________________________________SINAL PARA O RASPBERRY____________________________________
     
-    if palavra:
+    if palavra and valor_antigo == 5:
         conexao.write(b'0')#Inverter o valor de 5 ou 0
+        valor_antigo = 0
         print('Foi encontra')
-    else:
+    elif valor_antigo == 0:
         conexao.write(b'5')#Inverter o valor de 5 ou 0
+        valor_antigo = 5
     
 #Fecha a webcam ao apertar 'ESC'
 conexao.close()      

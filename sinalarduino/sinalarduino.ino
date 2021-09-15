@@ -1,6 +1,6 @@
 
 //esteira deve ser ligada na porta 5 / LED_BUILTIN
-int esteira = LED_BUILTIN; 
+int esteira = 7; 
 int sinal2 = 9; //Saida do sinal a cada 3 minutos         
 
 long tempoanterior = 0;
@@ -14,7 +14,7 @@ void setup() {
 
 void loop() {
 
-  if(millis() >= tempoanterior+10000){
+  if(millis() >= tempoanterior+20000){
     tempoanterior = millis();
     digitalWrite(sinal2, HIGH);
     tempoanterior = millis();
