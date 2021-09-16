@@ -18,7 +18,7 @@ porta = "COM3" #DEFINA A PORTA USB CORRETA ONDE O ARDUINO ESTA LIGADO
 velocidade = 9600
 conexao = serial.Serial(porta, velocidade);
 conexao.write(b'5') # Inicia enviando 5
-valor_antigo = 5
+valor_antigo = 0
 
 
 #__________________________________IDENTIFICA O NUMERO__________________________________________
@@ -110,18 +110,34 @@ while(1):
           
           #Encontrou a palavra: palavra = 1 pois foi encontrada na imagem
           palavra = 1
-      
+          valor_antigo = 0
+        else:
+            palavra = 0
+            valor_antigo = 5
+    else:
+        valor_antigo = 0
+        palavra = 0
     
-    #___________________________________SINAL PARA O RASPBERRY____________________________________
+    #___________________________________SINAL PARA O ARDUINO____________________________________
+    if valor_antigo == 0 and palavra == 1:
+        conexao.write(b'0')#Inverter o valor de 5 ou 0
+        time.sleep(0.1) 
+        
+    elif valor_antigo == 5 and palavra == 0:
+        conexao.write(b'5')#Inverter o valor de 5 ou 0
+        valor_antigo = 0
+        time.sleep(1)
     
-    if palavra and valor_antigo == 5:
+    elif valor_antigo == 0 and palavra == 0:
         conexao.write(b'0')#Inverter o valor de 5 ou 0
         valor_antigo = 0
-        print('Foi encontra')
-    elif valor_antigo == 0:
-        conexao.write(b'5')#Inverter o valor de 5 ou 0
-        valor_antigo = 5
-    
+        time.sleep(0.1)
+        
+  
+
+
+
+palavra = 0
 #Fecha a webcam ao apertar 'ESC'
 conexao.close()      
 captura.release()

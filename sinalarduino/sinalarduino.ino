@@ -1,6 +1,6 @@
 
 //esteira deve ser ligada na porta 5 / LED_BUILTIN
-int esteira = 7; 
+int esteira = LED_BUILTIN; 
 int sinal2 = 9; //Saida do sinal a cada 3 minutos         
 
 long tempoanterior = 0;
@@ -29,12 +29,12 @@ void loop() {
     if(situacao == '0'){
     digitalWrite(esteira, LOW);
     // wait for 3 seconds to see the dimming effect
-    delay(100);
+    
     }
 
     if(situacao == '5'){
     digitalWrite(esteira, HIGH);
-    delay(100);
+    
     }
   }
 }
