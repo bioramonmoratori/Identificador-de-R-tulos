@@ -27,7 +27,7 @@ numeroencontrado = 0
 palavra = 0
 encontrado = 0
 
-strnumero = input('Digite o numero do produto a ser identificado com valor 0V (1,2,3, 4 ou 12): ')
+strnumero = input('Digite o numero do produto a ser identificado com valor 0V (1,2,3,4,5,6,7,8,9 ou 12): ')
 strpalavra1 = input('Digite a palavra a ser identificada com valor 0V: ')
 strpalavra2 = input('Digite uma variacao do nome a ser identificado: ')
 strpalavra3 = input('Digite uma variacao do nome a ser identificado: ')
@@ -67,31 +67,50 @@ while(1):
     print(prediction)
     
     #Aparece na tela a porcentagem de certeza do numero '02' (correspondente à categoria 01)
-    print(prediction[0][1])
 
     #Aqui e transformada a certeza das categorias em valor alto para as variaveis que representam os numeros
     #A categoria que possui maior porcentagem de certeza, "vence" e um sinal alto vai para sua respectiva variavel
-    if prediction[0][0] > prediction[0][1] and prediction[0][0] > prediction[0][2] and prediction[0][0] > prediction[0][3] and prediction[0][0] > prediction[0][4]  and prediction[0][0] > prediction[0][5]:
+    if prediction[0][0] > prediction[0][1] and prediction[0][0] > prediction[0][2] and prediction[0][0] > prediction[0][3] and prediction[0][0] > prediction[0][4]  and prediction[0][0] > prediction[0][5] and prediction[0][0] > prediction[0][6] and prediction[0][0] > prediction[0][7] and prediction[0][0] > prediction[0][8] and prediction[0][0] > prediction[0][9] and prediction[0][0] > prediction[0][10]:
             print("Encontramos o numero '01'")
             numeroencontrado = '1'
             
-    elif prediction[0][1] > prediction[0][0] and prediction[0][1] > prediction[0][2] and prediction[0][1] > prediction[0][3] and prediction[0][1] > prediction[0][4] and prediction[0][1] > prediction[0][5]:
+    elif prediction[0][1] > prediction[0][0] and prediction[0][1] > prediction[0][2] and prediction[0][1] > prediction[0][3] and prediction[0][1] > prediction[0][4] and prediction[0][1] > prediction[0][5] and prediction[0][1] > prediction[0][6] and prediction[0][1] > prediction[0][7] and prediction[0][1] > prediction[0][8] and prediction[0][1] > prediction[0][9] and prediction[0][1] > prediction[0][10]:
             print("Encontramos o numero '02'")
             numeroencontrado = '2'
             
-    elif prediction[0][2] > prediction[0][0] and prediction[0][2] > prediction[0][1] and prediction[0][2] > prediction[0][3] and prediction[0][2] > prediction[0][4] and prediction[0][2] > prediction[0][5]:
+    elif prediction[0][2] > prediction[0][0] and prediction[0][2] > prediction[0][1] and prediction[0][2] > prediction[0][3] and prediction[0][2] > prediction[0][4] and prediction[0][2] > prediction[0][5] and prediction[0][2] > prediction[0][6] and prediction[0][2] > prediction[0][7] and prediction[0][2] > prediction[0][8] and prediction[0][2] > prediction[0][9] and prediction[0][2] > prediction[0][10]:
             print("Encontramos o numero '03'")
             numeroencontrado = '3'
             
-    elif prediction[0][3] > prediction[0][0] and prediction[0][3] > prediction[0][1] and prediction[0][3] > prediction[0][2] and prediction[0][3] > prediction[0][4] and prediction[0][3] > prediction[0][5]:
+    elif prediction[0][3] > prediction[0][0] and prediction[0][3] > prediction[0][1] and prediction[0][3] > prediction[0][2] and prediction[0][3] > prediction[0][4] and prediction[0][3] > prediction[0][5] and prediction[0][3] > prediction[0][6] and prediction[0][3] > prediction[0][7] and prediction[0][3] > prediction[0][8] and prediction[0][3] > prediction[0][9] and prediction[0][3] > prediction[0][10]:
             print("Encontramos o numero '04'")
             numeroencontrado = '4'
             
-    elif prediction[0][4] > prediction[0][0] and prediction[0][4] > prediction[0][1] and prediction[0][4] > prediction[0][2] and prediction[0][4] > prediction[0][3] and prediction[0][4] > prediction[0][5]:
+    elif prediction[0][4] > prediction[0][0] and prediction[0][4] > prediction[0][1] and prediction[0][4] > prediction[0][2] and prediction[0][4] > prediction[0][3] and prediction[0][4] > prediction[0][5] and prediction[0][4] > prediction[0][6] and prediction[0][4] > prediction[0][7] and prediction[0][4] > prediction[0][8] and prediction[0][4] > prediction[0][9] and prediction[0][4] > prediction[0][10]:
+            print("Encontramos o numero 5")
+            numeroencontrado = '5'
+    
+    elif prediction[0][5] > prediction[0][0] and prediction[0][5] > prediction[0][1] and prediction[0][5] > prediction[0][2] and prediction[0][5] > prediction[0][3] and prediction[0][5] > prediction[0][4] and prediction[0][5] > prediction[0][6] and prediction[0][5] > prediction[0][7] and prediction[0][5] > prediction[0][8] and prediction[0][5] > prediction[0][9] and prediction[0][5] > prediction[0][10]:
+            print("Encontramos o numero 6")
+            numeroencontrado = '6'
+            
+    elif prediction[0][6] > prediction[0][0] and prediction[0][6] > prediction[0][1] and prediction[0][6] > prediction[0][2] and prediction[0][6] > prediction[0][3] and prediction[0][6] > prediction[0][4] and prediction[0][6] > prediction[0][5] and prediction[0][6] > prediction[0][7] and prediction[0][6] > prediction[0][8] and prediction[0][6] > prediction[0][9] and prediction[0][6] > prediction[0][10]:
+            print("Encontramos o numero 7")
+            numeroencontrado = '7'
+            
+    elif prediction[0][7] > prediction[0][0] and prediction[0][7] > prediction[0][1] and prediction[0][7] > prediction[0][2] and prediction[0][7] > prediction[0][3] and prediction[0][7] > prediction[0][4] and prediction[0][7] > prediction[0][5] and prediction[0][7] > prediction[0][6] and prediction[0][7] > prediction[0][8] and prediction[0][7] > prediction[0][9] and prediction[0][7] > prediction[0][10]:
+            print("Encontramos o numero 8")
+            numeroencontrado = '8'
+            
+    elif prediction[0][8] > prediction[0][0] and prediction[0][8] > prediction[0][1] and prediction[0][8] > prediction[0][2] and prediction[0][8] > prediction[0][3] and prediction[0][8] > prediction[0][4] and prediction[0][8] > prediction[0][5] and prediction[0][8] > prediction[0][6] and prediction[0][8] > prediction[0][7] and prediction[0][8] > prediction[0][9] and prediction[0][8] > prediction[0][10]:
+            print("Encontramos o numero 9")
+            numeroencontrado = '9'
+
+    elif prediction[0][9] > prediction[0][0] and prediction[0][9] > prediction[0][1] and prediction[0][9] > prediction[0][2] and prediction[0][9] > prediction[0][3] and prediction[0][9] > prediction[0][4] and prediction[0][9] > prediction[0][5] and prediction[0][9] > prediction[0][6] and prediction[0][9] > prediction[0][7] and prediction[0][9] > prediction[0][8] and prediction[0][9] > prediction[0][10]:
             print("Nenhum numero encontrado")
             numeroencontrado = '0'
-    
-    elif prediction[0][5] > prediction[0][0] and prediction[0][5] > prediction[0][1] and prediction[0][5] > prediction[0][2] and prediction[0][5] > prediction[0][3] and prediction[0][5] > prediction[0][4]:
+        
+    elif prediction[0][10] > prediction[0][0] and prediction[0][10] > prediction[0][1] and prediction[0][10] > prediction[0][2] and prediction[0][10] > prediction[0][3] and prediction[0][10] > prediction[0][4]  and prediction[0][10] > prediction[0][5] and prediction[0][10] > prediction[0][6] and prediction[0][10] > prediction[0][7] and prediction[0][10] > prediction[0][8] and prediction[0][10] > prediction[0][9]:
             print("Encontramos o numero 12")
             numeroencontrado = '12'
             
